@@ -1,6 +1,6 @@
 import 'package:english_words/english_words.dart';
 import 'package:flutter/material.dart';
-import 'description_place.dart';
+import 'package:platzi_trips_app/components/description_place.dart';
 
 void main() => runApp(MyApp());
 
