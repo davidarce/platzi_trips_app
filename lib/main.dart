@@ -1,6 +1,8 @@
 import 'package:english_words/english_words.dart';
 import 'package:flutter/material.dart';
 import 'package:platzi_trips_app/components/description_place.dart';
+import 'components/header_appbar.dart';
+import 'package:flutter/services.dart';
 
 void main() => runApp(MyApp());
 
@@ -11,16 +13,23 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setEnabledSystemUIOverlays([]);
     return MaterialApp(
       title: 'Reto 2',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
       home: new Scaffold(
-        appBar: AppBar(
-          title: Text("Popular"),
-        ),
-        body: new DescriptionPlace("Bahamas", descriptionDummy, 4 ),
+        body: Stack(
+          children: <Widget>[
+            ListView(
+              children: <Widget>[
+                new DescriptionPlace("Bahamas", descriptionDummy, 4 ),
+              ],
+            ),
+            HeaderAppBar(),
+          ],
+        )
       ),
       debugShowCheckedModeBanner: false,
     );

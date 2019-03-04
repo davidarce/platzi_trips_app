@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'star.dart';
 
 class Review extends StatelessWidget {
 
@@ -42,14 +43,19 @@ class Review extends StatelessWidget {
       ),
     );
 
-    final userInfo = Container(
-      margin: EdgeInsets.only(left: 20.0),
-      child: Text(
-        details,
-        textAlign: TextAlign.left,
-        style: TextStyle(
-            fontSize: 13.0, fontFamily: "Lato", color: Color(0xFF56575a)),
-      ),
+    final userInfo = Row(
+      children: <Widget>[
+        Container(
+          margin: EdgeInsets.only(left: 20.0, right: 20.0),
+          child:  Text(
+            details,
+            textAlign: TextAlign.left,
+            style: TextStyle(
+                fontSize: 13.0, fontFamily: "Lato", color: Color(0xFF56575a)),
+          ),
+        ),
+        Star(5, margin: EdgeInsets.only(right: 3.0), starSize: 12.0),
+      ],
     );
 
     final userComment = Container(
