@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 class CardImage extends StatelessWidget {
-
   final String pathImage;
 
   CardImage(this.pathImage);
@@ -28,6 +27,40 @@ class CardImage extends StatelessWidget {
           ]),
     );
 
-    return card;
+    return Stack(
+      alignment: Alignment(0.9, 1.1),
+      children: <Widget>[card, FloatingActionButtonGreen()],
+    );
+  }
+}
+
+class FloatingActionButtonGreen extends StatefulWidget {
+  @override
+  _FloatingActionButtonGreenState createState() =>
+      _FloatingActionButtonGreenState();
+}
+
+class _FloatingActionButtonGreenState extends State<FloatingActionButtonGreen> {
+  bool _pressed = false;
+
+  void _onPressedFav() {
+    setState(() {
+      _pressed = !this._pressed;
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return FloatingActionButton(
+      backgroundColor:
+          _pressed ? Color(0xFF11DA53) : Color.fromRGBO(221, 221, 221, 1),
+      mini: true,
+      tooltip: "Fav",
+      onPressed: _onPressedFav,
+      child: Icon(
+        _pressed ? Icons.favorite : Icons.favorite_border,
+        color: _pressed ? Colors.white : null,
+      ),
+    );
   }
 }
