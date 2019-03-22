@@ -1,15 +1,11 @@
 import 'package:english_words/english_words.dart';
 import 'package:flutter/material.dart';
-import 'package:platzi_trips_app/components/description_place.dart';
-import 'components/header_appbar.dart';
 import 'package:flutter/services.dart';
+import 'package:platzi_trips_app/components/platzi_trips.dart';
 
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
-
-  final String descriptionDummy = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. \n\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.";
-
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
@@ -19,18 +15,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: new Scaffold(
-        body: Stack(
-          children: <Widget>[
-            ListView(
-              children: <Widget>[
-                new DescriptionPlace("Bahamas", descriptionDummy, 4 ),
-              ],
-            ),
-            HeaderAppBar(),
-          ],
-        )
-      ),
+      home: PlatziTrips(),
       debugShowCheckedModeBanner: false,
     );
   }

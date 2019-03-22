@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'review_list.dart';
-import 'star.dart';
+import 'package:platzi_trips_app/components/home/review_list.dart';
+import 'package:platzi_trips_app/components/ui/star.dart';
 
 class DescriptionPlace extends StatelessWidget {
   final String namePlace;
@@ -38,7 +38,7 @@ class DescriptionPlace extends StatelessWidget {
             fontSize: 16.0,
             fontWeight: FontWeight.w300,
             color: Color(0xFF56575a)),
-        textAlign: TextAlign.left,
+        textAlign: TextAlign.justify,
       ),
     );
 

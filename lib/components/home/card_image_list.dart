@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'card_image.dart';
+import 'package:platzi_trips_app/components/ui/card_image.dart';
 
 class CardImageList extends StatelessWidget {
 
@@ -18,12 +18,12 @@ class CardImageList extends StatelessWidget {
         padding: EdgeInsets.all(25.0),
         scrollDirection: Axis.horizontal,
         children: <Widget>[
-          CardImage(pathImage1),
-          CardImage(pathImage2),
-          CardImage(pathImage3),
-          CardImage(pathImage4),
-          CardImage(pathImage5),
-          CardImage(pathImage6),
+          CardImage(pathImage: pathImage1),
+          CardImage(pathImage: pathImage2),
+          CardImage(pathImage: pathImage3),
+          CardImage(pathImage: pathImage4),
+          CardImage(pathImage: pathImage5),
+          CardImage(pathImage: pathImage6),
         ],
       ),
     );

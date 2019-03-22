@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'star.dart';
+import 'package:platzi_trips_app/components/ui/circle_avatar.dart';
+import 'package:platzi_trips_app/components/ui/star.dart';
 
 class Review extends StatelessWidget {
 
@@ -25,14 +26,7 @@ class Review extends StatelessWidget {
       ),
     );*/
 
-    final profilePhoto = Container(
-      margin: EdgeInsets.only(top: 20.0, left: 20.0),
-      width: 80.0,
-      height: 80.0,
-      child: CircleAvatar(
-        backgroundImage: AssetImage(pathImage),
-      ),
-    );
+    final profilePhoto = CircleImage.margin(pathImage: pathImage, marginTop: 20.0, marginLeft: 20.0,);
 
     final username = Container(
       margin: EdgeInsets.only(left: 20.0),
